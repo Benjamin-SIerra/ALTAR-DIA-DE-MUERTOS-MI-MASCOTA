@@ -7,5 +7,5 @@
     <circle r="30" fill="#F27410"/>
     <circle r="14" fill="#FFD86B"/>
   </g>
-  <text x="200" y="350" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#FBEBD3">Tu foto aquí</text>
+  <text x="200" y="350" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#FBEBD3">git add "GARY BUE BUE.jpg"</text>
 </svg>
