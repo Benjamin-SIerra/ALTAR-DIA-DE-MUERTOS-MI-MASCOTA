@@ -1,60 +1,16 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mi ofrenda digital</title>
-    <meta name="description" content="Una ofrenda digital de Día de Muertos publicada con AWS Amplify Hosting." />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2c4 6 8 10 8 17a8 8 0 0 1-16 0c0-7 4-11 8-17z' fill='%23FF9F1C'/%3E%3C/svg%3E" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Papel picado: decoración, no necesitas cambiarlo -->
-    <svg width="0" height="0" class="sr-only" aria-hidden="true">
-      <symbol id="bandera" viewBox="0 0 100 120">
-        <path fill-rule="evenodd" d="M0 0H100V108L92 120 83 108 75 120 67 108 58 120 50 108 42 120 33 108 25 120 17 108 8 120 0 108Z
-          M12 14a3 3 0 1 0 6 0a3 3 0 1 0-6 0z M29 14a3 3 0 1 0 6 0a3 3 0 1 0-6 0z M47 14a3 3 0 1 0 6 0a3 3 0 1 0-6 0z
-          M65 14a3 3 0 1 0 6 0a3 3 0 1 0-6 0z M82 14a3 3 0 1 0 6 0a3 3 0 1 0-6 0z
-          M42 52a8 8 0 1 0 16 0a8 8 0 1 0-16 0z
-          M61 52a7 7 0 1 0 14 0a7 7 0 1 0-14 0z M25 52a7 7 0 1 0 14 0a7 7 0 1 0-14 0z
-          M52 67.6a7 7 0 1 0 14 0a7 7 0 1 0-14 0z M34 67.6a7 7 0 1 0 14 0a7 7 0 1 0-14 0z
-          M52 36.4a7 7 0 1 0 14 0a7 7 0 1 0-14 0z M34 36.4a7 7 0 1 0 14 0a7 7 0 1 0-14 0z
-          M18 82L25 90 18 98 11 90Z M82 82L89 90 82 98 75 90Z M50 86L54 92 50 98 46 92Z" />
-      </symbol>
-    </svg>
-    <div class="papel-picado" aria-hidden="true">
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-      <svg class="bandera"><use href="#bandera" /></svg>
-    </div>
-
-    <main id="ofrenda" class="ofrenda">
+    <main id="ofrenda" class="ofrenda encendida">
       <h1 class="titulo">GARY EL PERRO MAS FIEL</h1>
 
       <div class="altar">
-        <div class="dedicatoria" id="dedicatoria">
-          <p class="pista">Enciende la vela para leer la dedicatoria.</p>
-
+        <div class="dedicatoria visible" id="dedicatoria">
           <p class="texto-dedicatoria">
             Querido gary: hace un mes que te fuiste, y no hay dia que no te extrañe y que no piense en ti, me acompañaste mas llego a casa, tu no estas y me entra una tristeza enorme, yo te hubiera seguido cuidando toda la vida, te extraña
           </p>
         </div>
 
         <div class="centro">
-          <!-- Colocamos la foto aquí usando el nombre correcto "GARY BUE BUE.jpeg" y la clase "retrato" -->
-          <!-- Cambia .jpeg a .jpg -->
-          <img class="retrato" src="GARY BUE BUE.jpg" alt="Foto de mi mascota Gary" />
-    
+          <!-- Modificamos el nombre a GARY BUE BUE.jpg para corregir el recuadro gris -->
+          <img class="retrato" src="GARY BUE BUE.jpg" alt="Foto de mi mascota Gary" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
           
           <div class="vela" aria-hidden="true">
             <span class="llama"></span>
@@ -82,15 +38,8 @@
         </div>
       </div>
 
-      <button id="boton-vela" class="boton" type="button" aria-pressed="false" aria-controls="dedicatoria">
-        Encender la vela
+      <button id="boton-vela" class="boton" type="button" aria-pressed="true" aria-controls="dedicatoria">
+        Altar Encendido
       </button>
     </main>
 
-    <footer class="pie">
-      Publicada con AWS Amplify Hosting para JSConf México 2026
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
-</html>
