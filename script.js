@@ -1,12 +1,16 @@
-// Busca en la página el botón y la ofrenda completa
 const boton = document.querySelector('#boton-vela');
 const ofrenda = document.querySelector('#ofrenda');
+const dedicatoria = document.querySelector('#dedicatoria');
 
-// Esta función se ejecuta cada vez que alguien selecciona el botón
+// Forzamos el estado activo desde el primer segundo
+if(ofrenda) ofrenda.classList.add('encendida');
+if(dedicatoria) dedicatoria.classList.add('visible');
+
 boton.addEventListener('click', () => {
-  // TODO 5: Quita los // de las tres líneas de abajo para encender la vela.
   const encendida = ofrenda.classList.toggle('encendida');
+  dedicatoria.classList.toggle('visible', encendida);
   boton.setAttribute('aria-pressed', encendida);
   boton.textContent = encendida ? 'Apagar la vela' : 'Encender la vela';
 });
+
 
